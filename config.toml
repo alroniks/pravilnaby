@@ -1,0 +1,4 @@
+baseURL = "https://pravilna.by/"
+languageCode = "be-BY"
+title = "Правільна па-беларуску"
+theme = "rules"
