@@ -1,4 +1,5 @@
-baseURL = "https://pravilna.by/"
+baseURL = "http://alroniks.github.io/pravilnaby/"
 languageCode = "be-BY"
 title = "Правільна па-беларуску"
 theme = "rules"
+publishDir = "docs"
