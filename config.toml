@@ -1,5 +1,27 @@
 baseURL = "http://alroniks.github.io/pravilnaby/"
+
+title = "Правільна!"
+description = "desc"
+
+DefaultContentLanguage = "be"
 languageCode = "be-BY"
-title = "Правільна па-беларуску"
-theme = "rules"
+
 publishDir = "docs"
+theme="rules"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[[menu.main]]
+    name = "Усе правілы"
+    weight = 1
+    url = "/rules/"
+
+[[menu.main]]
+    name = "Падтрымаць праект"
+    weight = 2
+    url = "support"
+
+[[menu.main]]
+    name = "Пошук"
+    weight = 3
+    url = "search"

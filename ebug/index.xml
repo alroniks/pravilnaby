@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Правілы беларускай арфаграфіі і пунктуацыі on Правільна!</title>
+    <link>http://localhost:1313/pravilnaby/</link>
+    <description>Recent content in Правілы беларускай арфаграфіі і пунктуацыі on Правільна!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>be-BY</language>
+    <lastBuildDate>Wed, 10 Oct 2018 12:25:22 +0300</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/pravilnaby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
