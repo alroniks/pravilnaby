@@ -9,7 +9,9 @@ languageCode = "be-BY"
 publishDir = "docs"
 theme="rules"
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+
+googleAnalytics = "UA-127301756-1"
 
 [[menu.main]]
     name = "Усе правілы"
@@ -20,8 +22,3 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     name = "Падтрымаць праект"
     weight = 2
     url = "support"
-
-[[menu.main]]
-    name = "Пошук"
-    weight = 3
-    url = "search"
