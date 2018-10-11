@@ -3,30 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://alroniks.github.io/pravilnaby/docs/my-new-doc/</loc>
-    <lastmod>2018-10-09T18:32:30+03:00</lastmod>
+    <loc>https://pravilna.by/rules/1/</loc>
   </url>
   
   <url>
-    <loc>http://alroniks.github.io/pravilnaby/categories/</loc>
+    <loc>https://pravilna.by/rules/2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pravilna.by/rules/3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pravilna.by/rules/4/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pravilna.by/rules/8/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pravilna.by/rules/9/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pravilna.by/</loc>
+    <lastmod>2018-10-10T12:25:22+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pravilna.by/rules/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alroniks.github.io/pravilnaby/docs/</loc>
-    <lastmod>2018-10-09T18:32:30+03:00</lastmod>
-    <priority>0</priority>
+    <loc>https://pravilna.by/rules/2-3/</loc>
   </url>
   
   <url>
-    <loc>http://alroniks.github.io/pravilnaby/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://alroniks.github.io/pravilnaby/</loc>
-    <lastmod>2018-10-09T18:32:30+03:00</lastmod>
-    <priority>0</priority>
+    <loc>https://pravilna.by/rules/4.6/</loc>
   </url>
   
 </urlset>
