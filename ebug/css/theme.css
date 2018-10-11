@@ -9,7 +9,6 @@ body {
     font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
     font-size: 1.6em;
     font-weight: 300;
-    letter-spacing: .01em;
     line-height: 1.6;
     padding: 0 4rem;
     margin: 0;
@@ -87,16 +86,16 @@ main {
     margin: 0 auto;
 }
 
-main h2, main h3 {
+main > h2, main > h3 {
     font-family: Lato, sans-serif;
 }
 
-main h2 {
+main > h2 {
     font-size: 3rem;
     margin-bottom: 0;
 }
 
-main h3 {
+main > h3 {
     font-size: 2rem;
     margin: 2.25rem 0 0.75rem;
 }
@@ -132,4 +131,45 @@ main h3 {
 
 .column ul li a:hover {
     color: #aa3311;
+}
+
+article {
+    font-size: 2rem;
+}
+
+article h1,
+article h2 {
+    color: #333;
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+}
+article h2 {
+    font-size: 2.8rem;
+}
+
+article h1 span,
+article h2 span {
+    position: absolute;
+    left: 0;
+}
+
+article h1 span a,
+article h2 span a {
+    text-decoration: none;
+    color: #1e90ff;
+}
+
+article h1 span a:hover,
+article h2 span a:hover {
+    color: #aa3311;
+}
+
+article ol,
+article ul {
+    padding-left: 5rem;
+}
+
+article em {
+    color: teal;
 }

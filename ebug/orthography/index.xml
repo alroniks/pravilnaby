@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Арфаграфія on Правільна!</title>
+    <link>http://localhost:1313/pravilnaby/orthography/</link>
+    <description>Recent content in Арфаграфія on Правільна!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>be-BY</language>
+    
+	<atom:link href="http://localhost:1313/pravilnaby/orthography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
