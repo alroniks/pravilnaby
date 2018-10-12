@@ -2,6 +2,8 @@
     --view-max-width: 1280px;
     --font-serif: "Georgia", serif;
     --font-sanss: "Lato", sans-serif;
+    --link-color: #1e90ff;
+    --hover-color: #aa3311;
 }
 
 html {
@@ -24,6 +26,10 @@ body {
 *:after,
 *:before {
     box-sizing: inherit;
+}
+
+a {
+    color: var(--link-color);
 }
 
 
@@ -111,6 +117,15 @@ main h3 {
     margin: 2.25rem 0 0.75rem;
 }
 
+main.list {
+    display: flex;
+
+}
+main.list aside {
+    min-width: 30rem;
+    padding-top: 2rem;
+}
+
 .double {
     display: flex;
     width: 100%;
@@ -148,12 +163,19 @@ main h3 {
 }
 
 .column ul li a {
-    color: #1e90ff;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 .column ul li a:hover {
-    color: #aa3311;
+    color: var(--hover-color);
+}
+
+section:target {
+    margin: 0 -7rem -1rem;
+    padding: 0 7rem 1rem;
+    background: rgba(200, 0, 0, 0.05);
+    border-radius: 1rem;
 }
 
 article {
@@ -185,12 +207,12 @@ article h2 span {
 article h1 span a,
 article h2 span a {
     text-decoration: none;
-    color: #1e90ff;
+    color: var(--link-color);
 }
 
 article h1 span a:hover,
 article h2 span a:hover {
-    color: #aa3311;
+    color: var(--hover-color);
 }
 
 article ol,
@@ -215,6 +237,14 @@ article aside {
     color: #999;
 }
 
+article a {
+    text-decoration: none;
+}
+article a:hover,
+article a:active {
+    border-bottom: 1px solid;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -231,7 +261,7 @@ nav a {
 
 nav a span {
     font-size: 3rem;
-    color: #1e90ff;
+    color: var(--link-color);
     line-height: 2rem;
     position: relative;
     top: 4px;
@@ -240,9 +270,8 @@ nav a span {
 
 nav a:hover,
 nav a:hover span {
-    color: #aa3311;
+    color: var(--hover-color);
 }
-
 
 
 @media screen and (orientation: portrait) { 
@@ -267,5 +296,22 @@ nav a:hover span {
     }
     .double {
         flex-wrap: wrap;
+    }
+    .column ul {
+        max-width: 100%;
+    }
+    .column ul li {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .column ul li a {
+        margin-right: 1rem;
+    }
+    .column ul li span {
+        display: inline;
+        position: initial;
+
     }
 }
