@@ -5,5 +5,7 @@
 {{ end }}
 
 {{ if (fileExists $cover | relURL ) }}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ $cover | absURL }}">
     <meta property="og:image" content="{{ $cover | absURL }}">
 {{ end }}
