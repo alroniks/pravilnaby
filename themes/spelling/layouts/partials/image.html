@@ -1,4 +1,9 @@
 {{ $cover := .File.BaseFileName | printf "/covers/%s.jpg" }}
+
+{{ if eq .File.BaseFileName "_index" }}
+    {{ $cover = "/covers/main.jpg" }}    
+{{ end }}
+
 {{ if (fileExists $cover | relURL ) }}
     <meta property="og:image" content="{{ $cover | absURL }}">
 {{ end }}
