@@ -1,0 +1,4 @@
+{{ $cover := .File.BaseFileName | printf "/covers/%s.png" }}
+{{ if (fileExists $cover | relURL ) }}
+    <meta property="og:image" content="{{ $cover | absURL }}">
+{{ end }}

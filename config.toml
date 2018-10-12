@@ -7,7 +7,7 @@ DefaultContentLanguage = "be"
 languageCode = "be-BY"
 
 publishDir = "docs"
-theme="rules"
+theme="spelling"
 
 disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
 

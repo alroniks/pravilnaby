@@ -1,0 +1,31 @@
+{{ define "title" }} {{ .Title }} {{ end }}
+
+{{ define "prev" }}
+  {{ if .NextInSection }}
+    <link rel="prev" href="{{ .NextInSection.Permalink }}">
+  {{ end }}
+{{ end }}
+
+{{ define "next" }}
+  {{ if .PrevInSection }}
+    <link rel="next" href="{{ .PrevInSection.Permalink }}">
+  {{ end }}
+{{ end }}
+
+{{ define "main"}}
+
+  {{ partial "rule" . }}
+  
+  <nav>
+    {{ if .NextInSection }}
+      <a href="{{ .NextInSection.Permalink }}"><span>&larr;</span> {{ .NextInSection.Title }}</a>      
+    {{ else }}
+      <span></span>
+    {{ end }}
+    {{ if .PrevInSection }}
+      <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }} <span>&rarr;</span></a>
+    {{ else }}
+      <span></span>
+    {{ end }}  
+  </nav>
+{{ end }}

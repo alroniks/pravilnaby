@@ -1,0 +1,10 @@
+<section id="{{ .File.BaseFileName }}">
+  <article>
+    <aside>{{ .Params.section }} &rarr; {{ .Params.chapter }}</aside>
+    <h1>
+      <span><a href="{{ .Permalink }}">§{{ .File.BaseFileName }}</a></span>
+      {{ .Title }}
+    </h1>
+    {{ .Content }}
+  </article>    
+</section>

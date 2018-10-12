@@ -1,0 +1,13 @@
+<header>
+    <picture>
+        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    </picture>
+    <nav>
+        <menu>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}" {{ if $currentPage.IsMenuCurrent "main" . }} class="active"{{ end }} {{ if eq .Name "GitHub" }}target="_blank"{{ end }}>{{ .Name }}</a></li>
+            {{end}}      
+        </menu>
+    </nav>
+</header>
