@@ -36,8 +36,10 @@ layout = "support"
 
 Увесь [зыходны код](https://github.com/Alroniks/pravilnaby) праекта размешчаны на сервісе GitHub. 
 
-Калі вы знайшлі памылку ці маеце іншыя прапановы на развіцці, калі ласка, дасылайте іх праз раздел [Issues](https://github.com/Alroniks/pravilnaby/issues).
+Калі вы знайшлі памылку ці маеце іншыя прапановы па развіцці, калі ласка, дасылайте іх праз раздел [Issues](https://github.com/Alroniks/pravilnaby/issues).
 
-Калі вы жадаеце дапамгчы с кодам, дасылайце код праз раздел [Pull Requests](https://github.com/Alroniks/pravilnaby/pulls).
+Калі вы жадаеце дапамагчы з кодам, дасылайце каміты праз раздел [Pull Requests](https://github.com/Alroniks/pravilnaby/pulls).
 
 Дзякуй за ўдзел!
+
+P.S. Па пытаннях спонсарскай дапамогі ці рэкламы пішыце калі ласка на [ivan@klimchuk.com](mailto:ivan@klimchuk.com)
