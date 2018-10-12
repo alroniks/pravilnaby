@@ -14,11 +14,11 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
 googleAnalytics = "UA-127301756-1"
 
 [[menu.main]]
-    name = "Усе правілы"
-    weight = 1
-    url = "/rules/"
+    name = "GitHub"
+    weight = 2
+    url = "https://github.com/Alroniks/pravilnaby"
 
 [[menu.main]]
     name = "Падтрымаць праект"
-    weight = 2
-    url = "support"
+    weight = 1
+    url = "/support"
