@@ -2,8 +2,8 @@
   <article>
     <aside>{{ .Params.section }} &rarr; {{ .Params.chapter }}</aside>
     <h1>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
       <span><a href="{{ .Permalink }}">§{{ .File.BaseFileName }}</a></span>
-      {{ .Title }}
     </h1>
     {{ .Content }}
   </article>    

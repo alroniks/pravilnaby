@@ -14,16 +14,16 @@
 
 {{ define "main"}}
 
-  {{ partial "rule" . }}
+  {{ partial "rule-unlinked" . }}
   
   <nav>
     {{ if .NextInSection }}
-      <a href="{{ .NextInSection.Permalink }}"><span>&larr;</span> {{ .NextInSection.Title }}</a>      
+      <a href="{{ .NextInSection.Permalink }}" class="prev"><span>&larr;</span>&nbsp;{{ .NextInSection.Title }}</a>
     {{ else }}
       <span></span>
     {{ end }}
     {{ if .PrevInSection }}
-      <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }} <span>&rarr;</span></a>
+      <a href="{{ .PrevInSection.Permalink }}" class="next">{{ .PrevInSection.Title }}&nbsp;<span>&rarr;</span></a>
     {{ else }}
       <span></span>
     {{ end }}  

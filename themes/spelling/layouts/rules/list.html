@@ -4,7 +4,7 @@
   <h1>{{ .Title }}</h1>
   {{ range .Site.RegularPages }}
     {{ if in $.Params.include .BaseFileName }}
-      {{ partial "rule" . }}
+      {{ partial "rule-linked" . }}
     {{ end }}
   {{ end }}
 {{ end }}
