@@ -309,8 +309,7 @@ nav a:hover span {
         flex-wrap: wrap;
     }
     nav {
-        margin: 0;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
     }
     article {
         font-size: 1.6rem;

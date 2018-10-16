@@ -158,7 +158,7 @@ if (!doNotTrack) {
             suggestion: function(suggestion) {
               link = suggestion._snippetResult.link.value;
               title = suggestion._snippetResult.title.value;
-              text = suggestion._highlightResult.text.value
+              text = suggestion._snippetResult.text.value;
               output = "<a href=\"" + link + "\"><h4>" + title + "</h4><p>" + text + "</p></a>"
               return output;
             }
