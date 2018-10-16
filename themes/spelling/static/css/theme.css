@@ -232,6 +232,7 @@ article ul {
     padding-left: 0;
 }
 
+article strong,
 article em {
     color: teal;
 }

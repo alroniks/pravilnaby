@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
-    {{ .Hugo.Generator }}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  {{ .Hugo.Generator }}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
-    {{ with .Description }}
-        <meta name="description" content="{{ . }}">
-    {{ end }}
+  {{ with .Description }}
+      <meta name="description" content="{{ . }}">
+  {{ end }}
 
-    {{ template "_internal/google_analytics_async.html" . }}
-    {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/opengraph.html" . }}
 
-    {{ partial "image" . }}
+  {{ partial "image" . }}
 
-    <link rel="canonical" href="{{ .Permalink }}"> 
+  <link rel="canonical" href="{{ .Permalink }}"> 
 
-    {{ block "prev" . }}{{ end }}
-    {{ block "next" . }}{{ end }}
+  {{ block "prev" . }}{{ end }}
+  {{ block "next" . }}{{ end }}
 
-    {{ partial "favicon" . }}
+  {{ partial "favicon" . }}
 
-    <link href="{{ "/css/theme.css" | relURL }}" rel="stylesheet" type="text/css">
+  <link href="{{ "/css/theme.css" | relURL }}" rel="stylesheet" type="text/css">
+  <link href="{{ "/css/search.css" | relURL }}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    {{ partial "header.html" . }}
-    <main>
-        {{ block "main" . }}{{ end }}
-    </main>
-    {{ partial "footer.html" . }}
+  {{ partial "header.html" . }}
+  <main>
+      {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
 
-    <!-- <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script> -->
-
-    <!-- <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script> -->
+  {{ block "js" . }}
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+    <script>
+      var client = algoliasearch('TRE8OMB1KR', '784e81093a7bb9b63469ecd64bac6ccc');
+      var index = client.initIndex('rules');
+      autocomplete(
+        '#search-input', {
+          hint: false,
+          debug: false,
+          minLength: 1,
+          openOnFocus: true,
+          keyboardShortcuts: ['s'],
+          templates: {
+            footer: '<div class="branding"><div class="wrapper"><span>Працуе дякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
+          }
+        }, [{
+          source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+          displayKey: 'text',
+          templates: {
+            suggestion: function(suggestion) {
+              link = suggestion._snippetResult.link.value;
+              title = suggestion._snippetResult.title.value;
+              text = suggestion._highlightResult.text.value
+              output = "<a href=\"" + link + "\"><h4>" + title + "</h4><p>" + text + "</p></a>"
+              return output;
+            }
+          }
+        }]);
+    </script>
+  {{ end }}
 </body>
 </html>
