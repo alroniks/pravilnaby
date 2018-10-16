@@ -5,7 +5,7 @@
   border: 1px solid #d7d7d7;
   border-radius: 4px;
 }
-@media screen and (orientation: portrait) { 
+@media screen and (max-device-width:768px) and (orientation: portrait) { 
     .algolia-autocomplete {
         min-width: 100%;
     }
