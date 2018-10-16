@@ -1,8 +1,6 @@
 +++
 title = "Падтрымаць праект"
 draft = false
-type = "default"
-layout = "support"
 +++
 
 
