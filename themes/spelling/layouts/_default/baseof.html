@@ -13,6 +13,7 @@
 
   {{ template "_internal/google_analytics_async.html" . }}
   {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
 
   {{ partial "image" . }}
 
@@ -62,6 +63,23 @@
             }
           }
         }]);
+    </script>
+
+    <script>
+      var list = document.getElementsByTagName("ol");
+      if (list.length) {
+        list = list[0];
+      }
+
+      var index = 1;
+      for (i in list.childNodes) {
+        var node = list.childNodes[i];
+        if (node.nodeType != 1 && node.nodeName != "li") {
+          continue;
+        }
+        node.setAttribute('id', "p" + index);
+        index++;
+      }
     </script>
   {{ end }}
 </body>
