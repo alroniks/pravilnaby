@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="be-BY">
 <head>
-    <meta name="generator" content="Hugo 0.49" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Падтрымаць праект | Правільна!</title>
+  <meta name="generator" content="Hugo 0.49" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Падтрымаць праект | Правільна!</title>
 
-    
+  
 
-    
+  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -21,7 +21,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-    <meta property="og:title" content="Падтрымаць праект" />
+  <meta property="og:title" content="Падтрымаць праект" />
 <meta property="og:description" content="Вітаю, сябры.
 Праект &ldquo;Правільна!&rdquo; быў створаны, каб дапамагчы людям, якія жадаюць размаўляць і пісаць на беларускай мове, рабіць гэта правільна.
 У планах пашырыць магчымасці праекта і дадаць правілы класічнага правапісу, а так сама лацінкі.
@@ -31,8 +31,17 @@ if (!doNotTrack) {
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pravilna.by/support/" />
 
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Падтрымаць праект"/>
+<meta name="twitter:description" content="Вітаю, сябры.
+Праект &ldquo;Правільна!&rdquo; быў створаны, каб дапамагчы людям, якія жадаюць размаўляць і пісаць на беларускай мове, рабіць гэта правільна.
+У планах пашырыць магчымасці праекта і дадаць правілы класічнага правапісу, а так сама лацінкі.
+Праект незалежны, некамерцыйны і бясплатны для выкарстання для усіх жадаючых.
+Вы можаце дапамагчы добрай справе наступным чынам.
+Фінансава Сайт не патрабуе шмат сродкаў для існавання, але я буду рады любым ахвяраванням у якасці падзякі за працу і на аплату даменнага імені."/>
 
-    
+
+  
 
 
 
@@ -42,12 +51,12 @@ if (!doNotTrack) {
     <meta property="og:image" content="https://pravilna.by/covers/support.jpg">
 
 
-    <link rel="canonical" href="https://pravilna.by/support/"> 
+  <link rel="canonical" href="https://pravilna.by/support/"> 
 
-    
-    
+  
+  
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 <link rel="manifest" href="/favicon/site.webmanifest">
@@ -55,13 +64,15 @@ if (!doNotTrack) {
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-    <link href="/css/theme.css" rel="stylesheet" type="text/css">
+  <link href="/css/theme.css" rel="stylesheet" type="text/css">
+  <link href="/css/search.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header>
+  <header>
     <picture>
         <a href="https://pravilna.by">Правільна!</a>
     </picture>
+    <input type="text" id="search-input" placeholder="Пошук па правілах..." />
     <nav>
         <menu>
             
@@ -73,8 +84,8 @@ if (!doNotTrack) {
         </menu>
     </nav>
 </header>
-    <main>
-        
+  <main>
+      
     <article>
         <h1>Падтрымаць праект</h1>
         
@@ -101,7 +112,7 @@ if (!doNotTrack) {
 
 <p>Нумар кошыка Яндекс.Грошы:</p>
 
-<h3 id="41001878021446-https-money-yandex-ru-to-41001878021446"><a href="https://money.yandex.ru/to/41001878021446">41001878021446</a></h3>
+<h3 id="41001878021446-https-money-yandex-ru-to-41001878021446-500"><a href="https://money.yandex.ru/to/41001878021446/500">41001878021446</a></h3>
 
 <h2 id="уделам">Уделам</h2>
 
@@ -117,8 +128,8 @@ if (!doNotTrack) {
 
     </article>
 
-    </main>
-    <footer>
+  </main>
+  <footer>
     <div class="copyright">
         Створана by <a href="https://klimchuk.com/" target="_blank">Іван Клімчук</a>
     </div>
@@ -127,8 +138,53 @@ if (!doNotTrack) {
     </div>
 </footer>
 
-    
+  
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+    <script>
+      var client = algoliasearch('TRE8OMB1KR', '784e81093a7bb9b63469ecd64bac6ccc');
+      var index = client.initIndex('rules');
+      autocomplete(
+        '#search-input', {
+          hint: false,
+          debug: false,
+          minLength: 1,
+          openOnFocus: true,
+          keyboardShortcuts: ['s'],
+          templates: {
+            footer: '<div class="branding"><div class="wrapper"><span>Працуе дякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
+          }
+        }, [{
+          source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+          displayKey: 'text',
+          templates: {
+            suggestion: function(suggestion) {
+              link = suggestion._snippetResult.link.value;
+              title = suggestion._snippetResult.title.value;
+              text = suggestion._highlightResult.text.value
+              output = "<a href=\"" + link + "\"><h4>" + title + "</h4><p>" + text + "</p></a>"
+              return output;
+            }
+          }
+        }]);
+    </script>
 
-    
+    <script>
+      var list = document.getElementsByTagName("ol");
+      if (list.length) {
+        list = list[0];
+      }
+
+      var index = 1;
+      for (i in list.childNodes) {
+        var node = list.childNodes[i];
+        if (node.nodeType != 1 && node.nodeName != "li") {
+          continue;
+        }
+        node.setAttribute('id', "p" + index);
+        index++;
+      }
+    </script>
+  
 </body>
 </html>

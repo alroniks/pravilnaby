@@ -232,6 +232,14 @@ article ul {
     padding-left: 0;
 }
 
+article ol li:target p {
+    margin: -1rem -3rem;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    background-color: rgba(0,128,128, 0.10);
+}
+
+article strong,
 article em {
     color: teal;
 }
