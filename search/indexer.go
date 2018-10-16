@@ -50,7 +50,7 @@ func main() {
 
     counter := 1;
 
-    for counter <= 9 {
+    for counter <= 66 {
         wg.Add(1)
         go processParagraph(counter)
         counter++;
@@ -109,7 +109,7 @@ func processParagraph(p int) {
             Point: data.Point,
             Combinations: data.Combinations,
             Examples: data.Examples,
-            Text: data.Text,
+            Text: strings.Replace(data.Text, "\n", "", -1),
             Link: link,
         }   
     }
