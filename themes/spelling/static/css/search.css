@@ -5,7 +5,7 @@
   border: 1px solid #d7d7d7;
   border-radius: 4px;
 }
-@media screen and (max-device-width:768px) and (orientation: portrait) { 
+@media screen and (max-device-width: 768px) {
     .algolia-autocomplete {
         min-width: 100%;
     }
@@ -49,7 +49,7 @@
 }
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
   cursor: pointer;
-  padding: 2rem;
+  padding: .5rem 2rem;
 }
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion a {
     color: inherit;
@@ -88,4 +88,14 @@
 }
 .algolia-autocomplete .aa-dropdown-menu .branding img {
     width: 12rem;
+}
+
+@media screen and (max-device-width: 768px) {
+    .algolia-autocomplete .aa-dropdown-menu .branding .wrapper {
+        justify-content: space-between;
+    }
+    .algolia-autocomplete .aa-dropdown-menu .branding span {
+        white-space: nowrap;
+        font-size: 1.4rem;
+    }
 }

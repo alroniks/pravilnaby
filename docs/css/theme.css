@@ -301,7 +301,7 @@ nav a:hover span {
 }
 
 
-@media screen and (max-device-width:768px) and (orientation: portrait) { 
+@media screen and (max-device-width:768px) {
     header {
         flex-direction: column;
     }
