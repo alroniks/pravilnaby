@@ -24,8 +24,8 @@
 
   {{ partial "favicon" . }}
 
-  <link href="{{ "/css/theme.css" | relURL }}" rel="stylesheet" type="text/css">
-  <link href="{{ "/css/search.css" | relURL }}" rel="stylesheet" type="text/css">
+  <link href="{{ "/css/theme.css" | relURL }}?dropcache=1" rel="stylesheet" type="text/css">
+  <link href="{{ "/css/search.css" | relURL }}?dropcache=1" rel="stylesheet" type="text/css">
 </head>
 <body>
   {{ partial "header.html" . }}
