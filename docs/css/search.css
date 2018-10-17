@@ -21,8 +21,9 @@
     height: 100%;
     font-size: 2rem;
     font-family: "Georgia", serif;
-    line-height: 4rem;
+    line-height: 2rem;
     padding-left: 1rem;
+    color: #444;
 }
 .algolia-autocomplete .aa-input:focus {
     outline: none;
@@ -58,6 +59,7 @@
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion h4 {
     font-size: 1.6rem;
     margin: 0;
+    color: #333;
 }
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion p {
     margin: 0;
