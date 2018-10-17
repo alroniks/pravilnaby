@@ -26,6 +26,7 @@
 
   <link href="{{ "/css/theme.css" | relURL }}?dropcache=1" rel="stylesheet" type="text/css">
   <link href="{{ "/css/search.css" | relURL }}?dropcache=1" rel="stylesheet" type="text/css">
+  <link href="{{ "/css/likely.css" | relURL }}" rel="stylesheet" type="text/css">
 </head>
 <body>
   {{ partial "header.html" . }}
@@ -81,6 +82,7 @@
         index++;
       }
     </script>
+    <script src="{{ "/js/likely.js" | relURL }}"></script>
   {{ end }}
 </body>
 </html>

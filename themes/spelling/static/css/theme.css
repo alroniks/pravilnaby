@@ -32,6 +32,17 @@ a {
     color: var(--link-color);
 }
 
+main {
+    position: relative;
+}
+
+.main.likely {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    margin-bottom: -3rem;
+}
+
 
 header {
     margin: 0 auto;
@@ -301,7 +312,7 @@ nav a:hover span {
 }
 
 
-@media screen and (max-device-width:768px) {
+@media screen and (max-width: 900px) {
     header {
         flex-direction: column;
     }
@@ -351,5 +362,9 @@ nav a:hover span {
     }
     article blockquote {
         margin-left: 0;
+    }
+    .main.likely {
+        position: initial;
+        margin: 2rem 0 1rem;
     }
 }
