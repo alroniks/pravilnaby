@@ -216,6 +216,7 @@ article h1 span,
 article h2 span {
     position: absolute;
     right: 101%;
+    top: 0;
 }
 
 article h1 span a,
@@ -243,7 +244,7 @@ article ul {
     padding-left: 0;
 }
 
-article ol li:target p {
+article ol li:target div {
     margin: -1rem -3rem;
     padding: 1rem 3rem;
     border-radius: 4px;
@@ -288,6 +289,7 @@ nav a {
     margin: 0.75rem 0;
     color: #222;
     text-decoration: none;
+    max-width: 48%;
 }
 
 nav a span {
@@ -321,6 +323,9 @@ nav a:hover span {
     }
     nav {
         margin: 2rem 0;
+    }
+    nav a {
+        max-width: 100%;
     }
     article {
         font-size: 1.6rem;
