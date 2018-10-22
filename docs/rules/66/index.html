@@ -21,6 +21,35 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+  
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter50738590 = new Ya.Metrika2({
+                    id:50738590,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50738590" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
   <meta property="og:title" content="Правілы паслядоўнасці знакаў прыпынку пры спасылках" />
 <meta property="og:description" content=" Коска, кропка з коскай, двукроп’е і кропка ставяцца пасля лічбы або зорачкі, якія з’яўляюцца знакамі-паказальнікамі спасылкі (каб указаць, што спасылка адносіцца да пэўнага слова ці групы слоў): &hellip;¹, або &hellip;²; або &hellip;*: або &hellip;**.
  Пытальнік, клічнік, шматкроп’е і двукоссе ставяцца перад знакам спасылкі (лічбай ці зорачкай): &hellip;?¹ або &hellip;!² або &hellip;»*.
@@ -151,7 +180,7 @@ if (!doNotTrack) {
             footer: '<div class="branding"><div class="wrapper"><span>Працуе дякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
           }
         }, [{
-          source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+          source: autocomplete.sources.hits(index, { hitsPerPage: 7 }),
           displayKey: 'text',
           templates: {
             suggestion: function(suggestion) {

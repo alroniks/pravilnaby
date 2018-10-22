@@ -21,6 +21,35 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+  
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter50738590 = new Ya.Metrika2({
+                    id:50738590,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50738590" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
   <meta property="og:title" content="Правапіс звонкіх і глухіх зычных" />
 <meta property="og:description" content="Чаргаванне звонкіх і глухіх зычных (акрамя прыставачнага з) на пісьме не адлюстроўваецца. Для праверкі правільнасці напісання звонкіх і глухіх зычных трэба змяніць слова ці падабраць іншае аднакаранёвае слова, каб пасля зычнага, які патрабуе праверкі, быў галосны або зычныя р, л, м, н, в: рыбка – рыба, магчы – магу, кладка – кладак, даведка – даведацца, дзядзька – дзядзечка, хадзьба – хадзіць, казка – казаць, важкі – важыць, просьба – прасіць, касьба – касіць, носьбіт – насіць, малацьба – малаціць, рубчык – рубец, паўзці – паўзу, малодшы – малады; хлеб – хлеба, рог – рога, дзед – дзеда, поезд – поезда, роўнядзь – роўнядзі, сядзь – сядзі, нож – нажа, маж – мажаш, лістаж – лістажу, воз – воза, мазь – мазі, дождж – дажджу, рэж – рэжу, а таксама розаг – розгі, мозг – мазгі, лязг – лязгаць, грыб – грыбны, грыбніца, бег – беглы, бегма, загадка – загадны, загадваць, ножка – нажны." />
 <meta property="og:type" content="article" />
@@ -145,7 +174,7 @@ if (!doNotTrack) {
             footer: '<div class="branding"><div class="wrapper"><span>Працуе дякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
           }
         }, [{
-          source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+          source: autocomplete.sources.hits(index, { hitsPerPage: 7 }),
           displayKey: 'text',
           templates: {
             suggestion: function(suggestion) {

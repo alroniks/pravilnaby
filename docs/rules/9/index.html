@@ -21,6 +21,35 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+  
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter50738590 = new Ya.Metrika2({
+                    id:50738590,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50738590" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
   <meta property="og:title" content="Спалучэнні галосных у запазычаных словах" />
 <meta property="og:description" content="Калі спалучэнні іо, йо вымаўляюцца як два склады, тады яны на пісьме абазначаюцца: паміж зычнымі – літарамі іё (ыё) пад націскам і ія (ыя) не пад націскам: біёлаг, біёграф, дамініён, Ліён, аксіёма, бібліёграф, Галакціён, Гесіёд, патрыёт, рацыён, радыёла, стадыён, бастыён; біяло&rsquo;гія, бібліятэ&rsquo;ка, геліятро&rsquo;п, піяне&rsquo;р, ажыята&rsquo;ж, перыяды&rsquo;чны, патрыяты&rsquo;зм, акцыяне&rsquo;рны, нацыяна&rsquo;льны, рацыяналіза&rsquo;тар; у пачатку слова – літарамі іо пад націскам і іа не пад націскам: іо&rsquo;н, іо&rsquo;нны, Іо&rsquo;сіф; Іані&rsquo;чнае мора, іан&rsquo;ійцы, іаніза&rsquo;цыя, Іакага&rsquo;ма, Іаркшы&rsquo;р, Іашка&rsquo;р-Ала&rsquo;, Іаа&rsquo;н." />
 <meta property="og:type" content="article" />
@@ -159,7 +188,7 @@ if (!doNotTrack) {
             footer: '<div class="branding"><div class="wrapper"><span>Працуе дякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
           }
         }, [{
-          source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+          source: autocomplete.sources.hits(index, { hitsPerPage: 7 }),
           displayKey: 'text',
           templates: {
             suggestion: function(suggestion) {

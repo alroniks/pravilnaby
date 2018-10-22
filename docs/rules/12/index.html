@@ -21,6 +21,35 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+  
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter50738590 = new Ya.Metrika2({
+                    id:50738590,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50738590" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
   <meta property="og:title" content="Зычныя д_, _т і дз, ц" />
 <meta property="og:description" content="Чаргаванне цвёрдых зычных гукаў [д], [т] з мяккімі [дз’], [ц’]&nbsp;(дзеканне і цеканне) адлюстроўваецца на пісьме: замест д, т перад е, ё, і, ю, я пішуцца адпаведна дз, ц: гарады – у горадзе, народы – у народзе, сады – у садзе, іду – ідзём, вяду – вядзі, вада – вадзяны, грудны – грудзі, люду – людзі, варта – на варце, хата – у хаце, чысты – чысцюткі, выток – выцякаць, карта – на карце, катлы – кацёл, тру – церці, шосты – шэсць, пяты – пяць, латынь – лацінка." />
 <meta property="og:type" content="article" />
@@ -157,7 +186,7 @@ if (!doNotTrack) {
             footer: '<div class="branding"><div class="wrapper"><span>Працуе дякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
           }
         }, [{
-          source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+          source: autocomplete.sources.hits(index, { hitsPerPage: 7 }),
           displayKey: 'text',
           templates: {
             suggestion: function(suggestion) {
