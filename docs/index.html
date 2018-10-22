@@ -143,8 +143,8 @@ if (!doNotTrack) {
         <ul>
           <li class="finished"><span>§34</span><a title="§34" href="/rules/34">Агульныя правілы напісання разам, праз злучок і асобна</a></li>
           <li class="finished"><span>§37</span><a title="§37" href="/rules/37">Лічэбнікі</a></li>
-          <li><span>§38</span><a title="§38" href="/rules/38">Прыслоўі</a></li>
-          <li><span>§35..§36</span><a title="§35..§36" href="/rules/35-36">Складаныя назоўнікі і прыметнікі</a></li>
+          <li class="finished"><span>§38</span><a title="§38" href="/rules/38">Прыслоўі</a></li>
+          <li class="finished"><span>§35..§36</span><a title="§35..§36" href="/rules/35-36">Складаныя назоўнікі і прыметнікі</a></li>
           <li class="finished"><span>§39</span><a title="§39" href="/rules/39">Прыназоўнікі, злучнікі, часціцы, выклічнікі</a></li>
           <li><span>§40</span><a title="§40" href="/rules/40">Правапіс не (ня) і ні</a></li>
         </ul>
@@ -172,16 +172,16 @@ if (!doNotTrack) {
 
         <h3>Іншыя правілы</h3>
         <ul>
-            <li><span>§64</span><a title="§64" href="/rules/64">Простая мова і цытаты</a></li>
-            <li><span>§65</span><a title="§65" href="/rules/65">Спалучэнне знакаў прыпынку</a></li>
+            <li class="finished"><span>§64</span><a title="§64" href="/rules/64">Простая мова і цытаты</a></li>
+            <li class="finished"><span>§65</span><a title="§65" href="/rules/65">Спалучэнне знакаў прыпынку</a></li>
             <li class="finished"><span>§66</span><a title="§66" href="/rules/66">Знакі прыпынку пры спасылках</a></li>
         </ul>
 
         <h3>Коска ў складаных сказах</h3>
         <ul>
-            <li><span>§56</span><a title="§56" href="/rules/56">У складаназлучаным</a></li>
+            <li class="finished"><span>§56</span><a title="§56" href="/rules/56">У складаназлучаным</a></li>
             <li class="finished"><span>§57</span><a title="§57" href="/rules/57">У бяззлучнікавым</a></li>
-            <li><span>§58</span><a title="§58" href="/rules/58">У складаназалежным</a></li>
+            <li class="finished"><span>§58</span><a title="§58" href="/rules/58">У складаназалежным</a></li>
         </ul>
 
       </div>
@@ -263,8 +263,28 @@ if (!doNotTrack) {
         if (node.nodeType != 1 && node.nodeName != "li") {
           continue;
         }
+
+        var link = document.createElement('a');
+        link.setAttribute('href', "#p" + index);
+        link.setAttribute('class', 'point');
+        link.innerHTML = "#";
+
+        var div = document.createElement('div');
+        div.setAttribute('class', 'likely');
+        div.innerHTML += link.outerHTML;
+
+        var networks = ["twitter", "facebook", "vkontakte", "telegram"];
+
+        for (i = 0; i < networks.length; i++) {
+          var element = document.createElement('div');
+          element.setAttribute('class', networks[i]);
+          element.setAttribute('data-url', link.href);
+          div.innerHTML += element.outerHTML;
+        }
+
         node.setAttribute('id', "p" + index);
-        node.innerHTML = "<div>" + node.innerHTML + "</div>";
+        node.innerHTML = "<div>" + node.innerHTML + div.outerHTML + "</div>" ;
+
         index++;
       }
     </script>

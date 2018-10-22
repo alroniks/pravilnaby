@@ -109,10 +109,10 @@ if (!doNotTrack) {
 </section>
 
   <div class="likely">
-    <div class="twitter"></div>
-    <div class="facebook"></div>
-    <div class="vkontakte"></div>
-    <div class="telegram"></div>
+    <div class="twitter">Твітнуць</div>
+    <div class="facebook">Падзяліцца</div>
+  <div class="vkontakte">Запосціць</div>
+  <div class="telegram">Адправіць</div>
   </div>
   
   <nav>
@@ -177,8 +177,28 @@ if (!doNotTrack) {
         if (node.nodeType != 1 && node.nodeName != "li") {
           continue;
         }
+
+        var link = document.createElement('a');
+        link.setAttribute('href', "#p" + index);
+        link.setAttribute('class', 'point');
+        link.innerHTML = "#";
+
+        var div = document.createElement('div');
+        div.setAttribute('class', 'likely');
+        div.innerHTML += link.outerHTML;
+
+        var networks = ["twitter", "facebook", "vkontakte", "telegram"];
+
+        for (i = 0; i < networks.length; i++) {
+          var element = document.createElement('div');
+          element.setAttribute('class', networks[i]);
+          element.setAttribute('data-url', link.href);
+          div.innerHTML += element.outerHTML;
+        }
+
         node.setAttribute('id', "p" + index);
-        node.innerHTML = "<div>" + node.innerHTML + "</div>";
+        node.innerHTML = "<div>" + node.innerHTML + div.outerHTML + "</div>" ;
+
         index++;
       }
     </script>
