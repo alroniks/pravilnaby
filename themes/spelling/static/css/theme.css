@@ -161,9 +161,7 @@ main.list aside {
     padding-bottom: 0.8rem;
     position: relative;
 }
-.column ul li.finished span {
-    display: block;
-}
+
 .column ul li span {
     display: none;
     position: absolute;
@@ -172,6 +170,7 @@ main.list aside {
     font-size: 1.4rem;
     line-height: 2.2rem;
 }
+
 .column ul li:hover span {
     display: block;
 }
