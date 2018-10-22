@@ -12,6 +12,8 @@
   {{ end }}
 
   {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "metrika.html" . }}
+
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
 
