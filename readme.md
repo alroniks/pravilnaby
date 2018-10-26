@@ -26,8 +26,7 @@
 
 Пасля перайсці ў каталог з праектам і запусціць лакальны сервер:
 
-`cd pravilnaby`
-`hugo server -w`
+`cd pravilnaby && hugo server -w`
 
 Пасля таго, я сервер будзе запушчаны, сайт стане даступны па адрасе [http://localhost:1313/](http://localhost:1313/)
 
