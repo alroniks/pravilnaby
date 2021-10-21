@@ -20,7 +20,7 @@ googleAnalytics = "UA-127301756-1"
 [[menu.main]]
     name = "GitHub"
     weight = 2
-    url = "https://github.com/Alroniks/pravilnaby"
+    url = "https://github.com/alroniks/pravilnaby"
 
 [[menu.main]]
     name = "Падтрымаць праект"

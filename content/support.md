@@ -19,24 +19,29 @@ draft = false
 
 Сайт не патрабуе шмат сродкаў для існавання, але я буду рады любым ахвяраванням у якасці падзякі за працу і на аплату даменнага імені.
 
-Перавесці грошы можна на картку праз сервіс https://perevod.mtbank.by ці праз прыладу для тэлефонаў http://denegram.by/. Або праз сервіс Яндэкс.Грошы.
+Перавесці грошы можна на картку праз сервіс https://perevod.mtbank.by ці праз прыладу для тэлефонаў http://denegram.by/. Або праз сервіс YoMomey (новая назва былога сервісу Яндэкс.Грошы).
 
-Нумар карткі:
+Нумар карткі (Прыорбанк):
 
-### 5351 0413 2837 8722
+### 4916 9896 4056 9975
 
-Нумар кошыка Яндэкс.Грошы:
+Для кліентаў Прыорбанка [зручная спасылка на хуткі перавод](https://www.prior.by/web/transferForMe?target=STIBkiUUf0CJt8Z8sAEKvGsb1TN5DQAOGLneT7dUFmPV1mcGlQqkqqiJPtZ4e%2b8q3HaBfYvK8XyR1CWXZiBR2ErywC8kAz%2bi8G17S71luQ4HUyc%3d&amount=20&curr=BYN). Ці можна выкарыстаць QR-код ніжэй.
 
-### [41001878021446](https://money.yandex.ru/to/41001878021446/500)
+![Перавод на картку Прыорбанка](/prior.png)
+
+
+Нумар кошыка YoMoney:
+
+### [41001878021446](https://yoomoney.ru/to/41001878021446/1000)
 
 
 ## Удзелам
 
-Увесь [зыходны код](https://github.com/Alroniks/pravilnaby) праекта размешчаны на сервісе GitHub. 
+Увесь [зыходны код](https://github.com/alroniks/pravilnaby) праекта размешчаны на сервісе GitHub.
 
-Калі вы знайшлі памылку ці маеце іншыя прапановы па развіцці, калі ласка, дасылайте іх праз раздзел [Issues](https://github.com/Alroniks/pravilnaby/issues).
+Калі вы знайшлі памылку ці маеце іншыя прапановы па развіцці, калі ласка, дасылайте іх праз раздзел [Issues](https://github.com/alroniks/pravilnaby/issues).
 
-Калі вы жадаеце дапамагчы з кодам, дасылайце каміты праз раздзел [Pull Requests](https://github.com/Alroniks/pravilnaby/pulls).
+Калі вы жадаеце дапамагчы з кодам, дасылайце каміты праз раздзел [Pull Requests](https://github.com/alroniks/pravilnaby/pulls).
 
 Дзякуй за ўдзел!
 
