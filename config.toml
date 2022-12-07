@@ -13,10 +13,6 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
 
 googleAnalytics = "UA-127301756-1"
 
-[params]
-    yandexVerification = "2406aa0a0b211bf4"
-    yandexCounter = "50738590"
-
 [[menu.main]]
     name = "GitHub"
     weight = 2

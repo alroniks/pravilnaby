@@ -3,7 +3,7 @@
 {{ define "main"}}
   <h1>{{ .Title }}</h1>
   {{ range .Site.RegularPages }}
-    {{ if in $.Params.include .BaseFileName }}
+    {{ if in $.Params.include .File.BaseFileName }}
       {{ partial "rule-linked" . }}
     {{ end }}
   {{ end }}
