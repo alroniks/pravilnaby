@@ -1,7 +1,8 @@
+media: media
 content:
   - name: rules
-    label: "Правілы"
-    path: content/rules
+    label: 'Правілы'
+    path: 'content/rules'
     type: collection
     format: toml-frontmatter
     subfolders: false
