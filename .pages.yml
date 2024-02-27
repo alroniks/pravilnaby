@@ -5,4 +5,7 @@ content:
     type: collection
     format: toml-frontmatter
     subfolders: false
+    fields:
+      - name: title
+        label: Title
       
