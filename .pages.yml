@@ -1,0 +1,5 @@
+content:
+  - name: rules
+    label: Правілы
+    path: content/rules
+    type: collection
