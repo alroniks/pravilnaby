@@ -1,6 +1,6 @@
 content:
   - name: rules
-    label: Правілы
+    label: "Правілы"
     path: content/rules
     type: collection
     format: toml-frontmatter
