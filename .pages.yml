@@ -4,7 +4,7 @@ content:
     label: 'Правілы'
     path: 'content/rules'
     type: collection
-    format: toml-frontmatter
+    format: 'toml-frontmatter'
     subfolders: false
     fields:
       - name: title
