@@ -9,7 +9,7 @@ languageCode = "be-BY"
 publishDir = "docs"
 theme="spelling"
 
-disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+disableKinds = ["taxonomy", "RSS"]
 
 googleAnalytics = "UA-127301756-1"
 
