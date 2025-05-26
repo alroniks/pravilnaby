@@ -11,8 +11,6 @@ theme="spelling"
 
 disableKinds = ["taxonomy", "RSS"]
 
-googleAnalytics = "UA-127301756-1"
-
 [[menu.main]]
     name = "GitHub"
     weight = 2
