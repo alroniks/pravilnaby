@@ -7,10 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
-  {{ if isset .Site.Params "yandexverification" }}
-    <meta name="yandex-verification" content="{{ .Site.Params.yandexverification }}" />
-  {{ end }}
-
   {{ with .Description }}
       <meta name="description" content="{{ . }}">
   {{ end }}
