@@ -17,22 +17,33 @@
   {{ partial "rule-unlinked" . }}
 
   <div class="likely">
-    <div class="twitter">Твітнуць</div>
-    <div class="facebook">Падзяліцца</div>
-  <div class="vkontakte">Запосціць</div>
-  <div class="telegram">Адправіць</div>
+    <div class="twitter">Twitter</div>
+    <div class="telegram">Telegram</div>
+    <div class="facebook">Facebook</div>
   </div>
-  
+
   <nav>
     {{ if .NextInSection }}
-      <a href="{{ .NextInSection.Permalink }}" class="prev"><span>&larr;</span>&nbsp;{{ .NextInSection.Title }}</a>
+      <a href="{{ .NextInSection.RelPermalink }}" class="prev">
+        <span class="nav-arrow">&larr;</span>
+        <span class="nav-meta">
+          <span class="nav-rule">§{{ .NextInSection.File.BaseFileName }}</span>
+          {{ .NextInSection.Title }}
+        </span>
+      </a>
     {{ else }}
       <span></span>
     {{ end }}
     {{ if .PrevInSection }}
-      <a href="{{ .PrevInSection.Permalink }}" class="next">{{ .PrevInSection.Title }}&nbsp;<span>&rarr;</span></a>
+      <a href="{{ .PrevInSection.RelPermalink }}" class="next">
+        <span class="nav-meta">
+          <span class="nav-rule">§{{ .PrevInSection.File.BaseFileName }}</span>
+          {{ .PrevInSection.Title }}
+        </span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
     {{ else }}
       <span></span>
-    {{ end }}  
+    {{ end }}
   </nav>
 {{ end }}

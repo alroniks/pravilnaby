@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
 <head>
   {{ hugo.Generator }}
   <meta charset="utf-8">
@@ -29,11 +29,13 @@
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2434f42b75fe427397ab2f8171dc945a"}'></script>
 </head>
 <body>
-  {{ partial "header.html" . }}
-  <main>
-      {{ block "main" . }}{{ end }}
-  </main>
-  {{ partial "footer.html" . }}
+  <div class="page-wrap">
+    {{ partial "header.html" . }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
 
   {{ block "js" . }}
     <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
@@ -48,9 +50,7 @@
           minLength: 1,
           openOnFocus: true,
           keyboardShortcuts: ['s'],
-          templates: {
-            footer: '<div class="branding"><div class="wrapper"><span>Працуе дякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
-          }
+          templates: {}
         }, [{
           source: autocomplete.sources.hits(index, { hitsPerPage: 7 }),
           displayKey: 'text',
@@ -67,43 +67,45 @@
     </script>
 
     <script>
-      var list = document.getElementsByTagName("ol");
-      if (list.length) {
-        list = list[0];
-      }
-
-      var index = 1;
-      for (i in list.childNodes) {
-        var node = list.childNodes[i];
-        if (node.nodeType != 1 && node.nodeName != "li") {
-          continue;
-        }
-
-        var link = document.createElement('a');
-        link.setAttribute('href', "#p" + index);
-        link.setAttribute('class', 'point');
-        link.innerHTML = "#";
-
-        var div = document.createElement('div');
-        div.setAttribute('class', 'likely');
-        div.innerHTML += link.outerHTML;
-
-        var networks = ["twitter", "facebook", "vkontakte", "telegram"];
-
-        for (i = 0; i < networks.length; i++) {
-          var element = document.createElement('div');
-          element.setAttribute('class', networks[i]);
-          element.setAttribute('data-url', link.href);
-          div.innerHTML += element.outerHTML;
-        }
-
-        node.setAttribute('id', "p" + index);
-        node.innerHTML = "<div>" + node.innerHTML + div.outerHTML + "</div>" ;
-
-        index++;
+      var list = document.querySelector('article ol');
+      if (list) {
+        var idx = 1;
+        list.childNodes.forEach(function(node) {
+          if (node.nodeType !== 1 || node.nodeName !== 'LI') return;
+          var id = 'p' + idx;
+          node.setAttribute('id', id);
+          (function(li, anchorId) {
+            var anchor = document.createElement('a');
+            anchor.setAttribute('href', '#' + anchorId);
+            anchor.setAttribute('class', 'point');
+            anchor.textContent = '#';
+            anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+              history.pushState(null, '', '#' + anchorId);
+              var url = location.href;
+              navigator.clipboard.writeText(url).catch(function(){});
+              li.classList.remove('point-flash');
+              void li.offsetWidth;
+              li.classList.add('point-flash');
+            });
+            li.appendChild(anchor);
+          })(node, id);
+          idx++;
+        });
       }
     </script>
     <script src="{{ "/js/likely.js" | relURL }}"></script>
+    <script>
+      document.querySelectorAll('article blockquote').forEach(function(bq) {
+        // strip markdown italic underscores (Goldmark doesn't process them inside raw HTML)
+        bq.innerHTML = bq.innerHTML.replace(/_([^_]+)_/g, '$1');
+        // wrap author attributions in <cite>
+        bq.innerHTML = bq.innerHTML.replace(
+          /\(([А-ЯЁІЎЄҐA-ZА-яёіўєґa-z][^)]{1,40})\)\./g,
+          '<cite>($1).</cite>'
+        );
+      });
+    </script>
   {{ end }}
 </body>
 </html>

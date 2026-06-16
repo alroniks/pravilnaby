@@ -1,9 +1,8 @@
 .algolia-autocomplete {
-  box-shadow: 0 0 10px #ece8e8;
-  height: 4rem;
-  min-width: 40%;
-  border: 1px solid #d7d7d7;
-  border-radius: 4px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
 }
 @media screen and (max-device-width: 768px) {
     .algolia-autocomplete {
@@ -15,15 +14,14 @@
 }
 .algolia-autocomplete .aa-input {
     background: transparent;
-    height: 4rem;
     border: 0;
     width: 100%;
-    height: 100%;
-    font-size: 2rem;
-    font-family: "Georgia", serif;
-    line-height: 3rem;
-    padding-left: 1rem;
-    color: #444;
+    height: auto;
+    font-size: 1.35rem;
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: normal;
+    padding: 0.45rem 1rem 0.45rem 2.5rem;
+    color: #111111;
 }
 .algolia-autocomplete .aa-input:focus {
     outline: none;
@@ -72,32 +70,4 @@
   font-weight: bold;
   font-style: normal;
   color: teal;
-}
-.algolia-autocomplete .aa-dropdown-menu .branding {
-    margin: 1rem;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    border-top: 1px solid #d7d7d7;
-}
-.algolia-autocomplete .aa-dropdown-menu .branding .wrapper {
-    display: flex;
-    height: 3rem;
-    justify-content: flex-start;
-}
-.algolia-autocomplete .aa-dropdown-menu .branding span {
-    line-height: 3rem;
-    margin-right: 1rem;
-}
-.algolia-autocomplete .aa-dropdown-menu .branding img {
-    width: 12rem;
-}
-
-@media screen and (max-device-width: 768px) {
-    .algolia-autocomplete .aa-dropdown-menu .branding .wrapper {
-        justify-content: space-between;
-    }
-    .algolia-autocomplete .aa-dropdown-menu .branding span {
-        white-space: nowrap;
-        font-size: 1.4rem;
-    }
 }
