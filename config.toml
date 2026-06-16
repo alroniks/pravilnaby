@@ -4,12 +4,17 @@ title = "Правільна!"
 description = "desc"
 
 DefaultContentLanguage = "be"
-languageCode = "be-BY"
+locale = "be-BY"
 
 publishDir = "docs"
 theme="spelling"
 
 disableKinds = ["taxonomy", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [[menu.main]]
     name = "GitHub"

@@ -1,14 +1,23 @@
 <header>
-    <picture>
-        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    </picture>
-    <input type="text" id="search-input" placeholder="Пошук па правілах..." />
-    <nav>
+    <div class="nameplate">
+        <div class="nameplate-rule"></div>
+        <a href="{{ "/" | relURL }}" class="nameplate-title">{{ .Site.Title }}</a>
+        <div class="nameplate-rule"></div>
+    </div>
+    <div class="nameplate-tagline">Беларуская арфаграфія і пунктуацыя</div>
+    <div class="masthead-bar">
+        <div class="search-wrap">
+            <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 14l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Пошук па правілах..." />
+        </div>
         <menu>
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL }}" {{ if $currentPage.IsMenuCurrent "main" . }} class="active"{{ end }} {{ if eq .Name "GitHub" }}target="_blank"{{ end }}>{{ .Name }}</a></li>
-            {{end}}      
+            {{end}}
         </menu>
-    </nav>
+    </div>
 </header>
