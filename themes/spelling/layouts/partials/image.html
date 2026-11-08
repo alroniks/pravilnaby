@@ -1,11 +1,13 @@
-{{ $cover := .File.BaseFileName | printf "/covers/%s.jpg" }}
-
-{{ if eq .File.BaseFileName "_index" }}
-    {{ $cover = "/covers/main.jpg" }}    
+{{ $cover := "/covers/main.jpg" }}
+{{ with .File }}
+  {{ if and (ne .BaseFileName "_index") (ne .BaseFileName "") }}
+    {{ $candidate := printf "/covers/%s.jpg" .BaseFileName }}
+    {{ if or (fileExists (printf "static%s" $candidate)) (fileExists (printf "themes/spelling/static%s" $candidate)) }}
+      {{ $cover = $candidate }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 
-{{ if (fileExists $cover | relURL ) }}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ $cover | absURL }}">
-    <meta property="og:image" content="{{ $cover | absURL }}">
-{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ $cover | absURL }}">
+<meta property="og:image" content="{{ $cover | absURL }}">

@@ -3,13 +3,18 @@ baseURL = "https://pravilna.by"
 title = "Правільна!"
 description = "desc"
 
-DefaultContentLanguage = "be"
-languageCode = "be-BY"
+defaultContentLanguage = "be"
+locale = "be-BY"
 
 publishDir = "docs"
-theme="spelling"
+theme = "spelling"
 
-disableKinds = ["taxonomy", "RSS"]
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [[menu.main]]
     name = "GitHub"

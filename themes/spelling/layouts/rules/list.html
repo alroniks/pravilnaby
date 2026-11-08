@@ -1,10 +1,19 @@
-{{ define "title"}} {{ .Title}} {{end}}
+{{ define "title" }} {{ .Title }} {{ end }}
 
-{{ define "main"}}
+{{ define "main" }}
   <h1>{{ .Title }}</h1>
-  {{ range .Site.RegularPages }}
-    {{ if in $.Params.include .File.BaseFileName }}
-      {{ partial "rule-linked" . }}
-    {{ end }}
-  {{ end }}
+  {{- $include := slice -}}
+  {{- range $.Params.include -}}
+    {{- $include = $include | append (printf "%v" .) -}}
+  {{- end -}}
+  {{- if $include -}}
+    {{- range .Site.RegularPages -}}
+      {{- $page := . -}}
+      {{- with .File -}}
+        {{- if in $include .BaseFileName }}
+          {{ partial "rule-linked" $page }}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end }}
 {{ end }}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ or .Site.Language.Locale .Site.LanguageCode }}">
 <head>
   {{ hugo.Generator }}
   <meta charset="utf-8">
@@ -26,6 +26,7 @@
   <link href="{{ "/css/theme.css" | relURL }}?dropcache=1" rel="stylesheet" type="text/css">
   <link href="{{ "/css/search.css" | relURL }}?dropcache=1" rel="stylesheet" type="text/css">
   <link href="{{ "/css/likely.css" | relURL }}" rel="stylesheet" type="text/css">
+  <script defer src="https://at-glass.alroniks.workers.dev/s.js" data-project="pravilna-by" data-persistence="cookieless"></script>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2434f42b75fe427397ab2f8171dc945a"}'></script>
 </head>
 <body>
