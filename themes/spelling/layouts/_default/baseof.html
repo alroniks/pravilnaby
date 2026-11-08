@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ or .Site.Language.Locale .Site.LanguageCode }}">
+<html lang="{{ or .Site.Language.Lang "be" }}">
 <head>
   {{ hugo.Generator }}
   <meta charset="utf-8">
@@ -16,7 +16,7 @@
 
   {{ partial "image" . }}
 
-  <link rel="canonical" href="{{ .Permalink }}"> 
+  <link rel="canonical" href="{{ .Permalink }}">
 
   {{ block "prev" . }}{{ end }}
   {{ block "next" . }}{{ end }}
@@ -50,7 +50,7 @@
           openOnFocus: true,
           keyboardShortcuts: ['s'],
           templates: {
-            footer: '<div class="branding"><div class="wrapper"><span>Працуе дякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
+            footer: '<div class="branding"><div class="wrapper"><span>Працуе дзякуючы</span><a target="_blank" href="https://algolia.com"><img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></a></div></div>'
           }
         }, [{
           source: autocomplete.sources.hits(index, { hitsPerPage: 7 }),
