@@ -213,9 +213,10 @@ article h2 {
 
 article h1 span,
 article h2 span {
-    position: absolute;
-    right: 101%;
-    top: 0;
+    display: inline-block;
+    margin-right: 0.6rem;
+    color: var(--link-color);
+    font-weight: 600;
 }
 
 article h1 span a,
@@ -240,11 +241,16 @@ article h1 > a:hover {
 
 article ol,
 article ul {
-    padding-left: 0;
+    padding-left: 2.5rem;
+    margin: 1.5rem 0;
 }
 
 article ol li {
     margin: 2rem 0;
+}
+
+article ul li {
+    margin: 0.8rem 0;
 }
 
 article ol li .likely {
@@ -414,6 +420,22 @@ nav a:hover span {
         font-size: 1.6rem;
         padding-top: 0.8rem;
     }
+    article ol,
+    article ul {
+        padding-left: 2.2rem;
+        margin: 1.2rem 0;
+    }
+    article ol li {
+        margin: 1.4rem 0;
+    }
+    article ul li {
+        margin: 0.6rem 0;
+    }
+    article ol li:target > div:first-child {
+        margin: -0.6rem -1rem;
+        padding: 0.6rem 1rem;
+        border-radius: 4px;
+    }
     article aside {
         font-size: 1.2rem;
         line-height: 1.35;
@@ -482,7 +504,8 @@ nav a:hover span {
 .poll-banner {
     background: #f8fafc;
     border-bottom: 1px solid #e2e8f0;
-    padding: 0.8rem 2rem;
+    margin: 0 -4rem;
+    padding: 0.8rem 4rem;
     font-family: var(--font-sanss);
     font-size: 1.45rem;
     position: relative;
@@ -495,35 +518,37 @@ nav a:hover span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
-}
-
-.poll-content {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    flex-grow: 1;
+    gap: 2rem;
 }
 
 .poll-message {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 0.8rem;
+    flex: 1;
 }
 
 .poll-icon {
     font-size: 1.8rem;
     line-height: 1;
+    flex-shrink: 0;
 }
 
 .poll-text {
     font-weight: 500;
     color: #1e293b;
+    line-height: 1.4;
+}
+
+.poll-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-shrink: 0;
 }
 
 .poll-buttons {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 0.8rem;
 }
@@ -532,12 +557,13 @@ nav a:hover span {
     font-family: var(--font-sanss);
     font-size: 1.3rem;
     font-weight: 600;
-    padding: 0.45rem 1.2rem;
-    border-radius: 6px;
+    padding: 0.45rem 1.4rem;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.15s ease;
     outline: none;
     line-height: 1.4;
+    white-space: nowrap;
 }
 
 .poll-btn-yes {
@@ -549,6 +575,7 @@ nav a:hover span {
 .poll-btn-yes:hover {
     background: #1877d5;
     border-color: #1877d5;
+    box-shadow: 0 2px 4px rgba(30, 144, 255, 0.25);
 }
 
 .poll-btn-no {
@@ -560,14 +587,18 @@ nav a:hover span {
 .poll-btn-no:hover {
     background: #f1f5f9;
     color: #1e293b;
+    border-color: #94a3b8;
 }
 
 .poll-thanks {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-weight: 600;
     color: #166534;
     font-size: 1.45rem;
+    width: 100%;
+    padding: 0.3rem 0;
 }
 
 .poll-close-btn {
@@ -577,63 +608,66 @@ nav a:hover span {
     line-height: 1;
     color: #94a3b8;
     cursor: pointer;
-    padding: 0 0.5rem;
-    transition: color 0.15s ease;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .poll-close-btn:hover {
-    color: #334155;
+    color: #1e293b;
+    background: rgba(0, 0, 0, 0.05);
 }
 
 @media screen and (max-width: 900px) {
     .poll-banner {
-        padding: 0.7rem 1.2rem 0.8rem;
         margin: 0 -1.6rem;
+        padding: 0.8rem 1.6rem;
         border-bottom: 1px solid #e2e8f0;
     }
     .poll-wrapper {
         position: relative;
-        padding-right: 2.4rem;
-        align-items: flex-start;
-    }
-    .poll-content {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        width: 100%;
+        align-items: stretch;
+        gap: 0.8rem;
     }
     .poll-message {
         display: flex;
         align-items: flex-start;
         gap: 0.6rem;
+        padding-right: 2.6rem;
         width: 100%;
     }
     .poll-icon {
         font-size: 1.5rem;
         line-height: 1.3;
-        flex-shrink: 0;
     }
     .poll-text {
         font-size: 1.3rem;
         line-height: 1.35;
-        font-weight: 500;
+    }
+    .poll-actions {
+        width: 100%;
+        display: flex;
     }
     .poll-buttons {
         width: 100%;
         display: flex;
-        gap: 0.6rem;
+        gap: 0.8rem;
     }
     .poll-btn {
         flex: 1;
         text-align: center;
-        padding: 0.35rem 0.8rem;
-        font-size: 1.25rem;
-        border-radius: 20px;
-        white-space: nowrap;
+        padding: 0.45rem 0.6rem;
+        font-size: 1.2rem;
+        line-height: 1.25;
+        white-space: normal;
     }
     .poll-close-btn {
         position: absolute;
-        top: -0.3rem;
+        top: -0.2rem;
         right: -0.4rem;
         font-size: 2.2rem;
         line-height: 1;
@@ -641,6 +675,5 @@ nav a:hover span {
     }
     .poll-thanks {
         font-size: 1.3rem;
-        padding: 0.3rem 0;
     }
 }
