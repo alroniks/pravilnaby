@@ -83,6 +83,97 @@
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2434f42b75fe427397ab2f8171dc945a"}'></script>
 </head>
 <body>
+  <div id="classic-poll-banner" class="poll-banner" style="display: none;">
+  <div class="poll-wrapper">
+    <div class="poll-content" id="poll-content-block">
+      <span class="poll-icon">💡</span>
+      <span class="poll-text">Ці варта дадаць на сайт правілы класічнага правапісу (тарашкевіцы)?</span>
+      <div class="poll-buttons">
+        <button type="button" 
+                class="poll-btn poll-btn-yes" 
+                data-glass-event="poll_vote" 
+                data-glass-prop-poll="classic_orthography" 
+                data-glass-prop-choice="yes" 
+                onclick="submitPollVote('yes')">
+          Так, варта
+        </button>
+        <button type="button" 
+                class="poll-btn poll-btn-no" 
+                data-glass-event="poll_vote" 
+                data-glass-prop-poll="classic_orthography" 
+                data-glass-prop-choice="no" 
+                onclick="submitPollVote('no')">
+          Не, толькі афіцыйны
+        </button>
+      </div>
+    </div>
+    <div class="poll-thanks" id="poll-thanks-block" style="display: none;">
+      <span>Дзякуй за ваш голас! 👍</span>
+    </div>
+    <button type="button" 
+            class="poll-close-btn" 
+            title="Закрыць апытанне" 
+            aria-label="Закрыць апытанне" 
+            data-glass-event="poll_dismiss" 
+            data-glass-prop-poll="classic_orthography" 
+            onclick="dismissPoll()">
+      &times;
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var POLL_KEY = 'pravilna_poll_classic_2026';
+  var banner = document.getElementById('classic-poll-banner');
+  if (!banner) return;
+
+  try {
+    if (localStorage.getItem(POLL_KEY)) {
+      return;
+    }
+  } catch(e) {}
+
+  banner.style.display = 'block';
+  sendGlassEvent('poll_view', { poll: 'classic_orthography' });
+
+  window.submitPollVote = function(choice) {
+    try { localStorage.setItem(POLL_KEY, 'voted_' + choice); } catch(e) {}
+    sendGlassEvent('poll_vote', { poll: 'classic_orthography', choice: choice });
+
+    var content = document.getElementById('poll-content-block');
+    var thanks = document.getElementById('poll-thanks-block');
+    if (content) content.style.display = 'none';
+    if (thanks) thanks.style.display = 'flex';
+
+    setTimeout(function() {
+      banner.style.transition = 'opacity 0.4s ease, max-height 0.4s ease';
+      banner.style.opacity = '0';
+      banner.style.maxHeight = '0';
+      setTimeout(function() { banner.style.display = 'none'; }, 400);
+    }, 2200);
+  };
+
+  window.dismissPoll = function() {
+    try { localStorage.setItem(POLL_KEY, 'dismissed'); } catch(e) {}
+    sendGlassEvent('poll_dismiss', { poll: 'classic_orthography' });
+    banner.style.display = 'none';
+  };
+
+  function sendGlassEvent(name, props) {
+    try {
+      if (window.glass && typeof window.glass.capture === 'function') {
+        window.glass.capture(name, props);
+      } else {
+        window.glass = window.glass || { q: [] };
+        window.glass.q = window.glass.q || [];
+        window.glass.q.push(['capture', name, props]);
+      }
+    } catch(e) {}
+  }
+})();
+</script>
+
   <header>
     <picture>
         <a href="https://pravilna.by/">Правільна!</a>
