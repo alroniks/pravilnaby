@@ -344,36 +344,108 @@ nav a:hover span {
 
 
 @media screen and (max-width: 900px) {
+    body {
+        padding: 0 1.6rem;
+    }
     header {
         flex-direction: column;
+        min-height: auto;
+        padding: 0.6rem 0 0.8rem;
+        margin-bottom: 0.6rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    header picture {
+        font-size: 2.3rem;
+        margin: 0.2rem 0 0.4rem;
+        line-height: 1.2;
+    }
+    header .algolia-autocomplete {
+        width: 100%;
+        min-width: 100%;
+        height: 3.6rem;
+        margin: 0.4rem 0 0.6rem;
+    }
+    header .algolia-autocomplete .aa-input {
+        height: 3.6rem;
+        font-size: 1.5rem;
+        line-height: 3.6rem;
+        padding-left: 1rem;
+    }
+    header nav {
+        margin: 0.2rem 0 0;
+        font-size: 1.35rem;
+        width: 100%;
+        justify-content: center;
     }
     header menu {
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.8rem;
+        margin: 0;
+        padding: 0;
+        flex-wrap: nowrap;
+    }
+    header menu li {
+        margin: 0;
+        font-size: 1.35rem;
+        white-space: nowrap;
+    }
+    main > h1 {
+        font-size: 2.3rem;
+        line-height: 1.25;
+        margin: 0.8rem 0 0.4rem;
+        font-weight: 700;
+        color: #1e293b;
     }
     nav {
-        margin: 2rem 0;
+        margin: 1.5rem 0;
     }
     nav a {
         max-width: 100%;
     }
+    section:target {
+        margin: 0 -1.2rem -0.5rem;
+        padding: 0.6rem 1.2rem;
+        border-radius: 0.6rem;
+    }
     article {
         font-size: 1.6rem;
+        padding-top: 0.8rem;
+    }
+    article aside {
+        font-size: 1.2rem;
+        line-height: 1.35;
+        color: #64748b;
+        margin-bottom: 0.3rem;
     }
     article h1 {
-        font-size: 2.4rem;
-        display: flex;
-        justify-content: space-between;
+        font-size: 2.1rem;
+        line-height: 1.3;
+        margin: 0.3rem 0 0.8rem;
+        display: block;
     }
     article h1 > a {
+        color: #1e293b;
+        text-decoration: none;
+    }
+    article h1 > a:hover {
         color: var(--link-color);
-        text-decoration: underline;
     }
     article h1 span {
         position: initial;
-        color: #ccc;
+        display: inline-block;
+        margin-right: 0.5rem;
+        color: var(--link-color);
+        font-weight: 600;
     }
     article h1 span a {
-        color: inherit;
+        color: var(--link-color);
+        text-decoration: none;
+    }
+    article h1 span a:hover {
+        color: var(--hover-color);
     }
     .double {
         flex-wrap: wrap;
@@ -432,6 +504,12 @@ nav a:hover span {
     flex-wrap: wrap;
     gap: 1.2rem;
     flex-grow: 1;
+}
+
+.poll-message {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .poll-icon {
@@ -509,22 +587,60 @@ nav a:hover span {
 
 @media screen and (max-width: 900px) {
     .poll-banner {
-        padding: 1rem 1.5rem;
+        padding: 0.7rem 1.2rem 0.8rem;
+        margin: 0 -1.6rem;
+        border-bottom: 1px solid #e2e8f0;
     }
     .poll-wrapper {
+        position: relative;
+        padding-right: 2.4rem;
         align-items: flex-start;
     }
     .poll-content {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.8rem;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    .poll-message {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        width: 100%;
+    }
+    .poll-icon {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        flex-shrink: 0;
+    }
+    .poll-text {
+        font-size: 1.3rem;
+        line-height: 1.35;
+        font-weight: 500;
     }
     .poll-buttons {
         width: 100%;
         display: flex;
+        gap: 0.6rem;
     }
     .poll-btn {
         flex: 1;
         text-align: center;
+        padding: 0.35rem 0.8rem;
+        font-size: 1.25rem;
+        border-radius: 20px;
+        white-space: nowrap;
+    }
+    .poll-close-btn {
+        position: absolute;
+        top: -0.3rem;
+        right: -0.4rem;
+        font-size: 2.2rem;
+        line-height: 1;
+        padding: 0.2rem 0.5rem;
+    }
+    .poll-thanks {
+        font-size: 1.3rem;
+        padding: 0.3rem 0;
     }
 }
