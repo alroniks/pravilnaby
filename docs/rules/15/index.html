@@ -68,7 +68,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap" rel="stylesheet">
 
-  <link href="/css/theme.css?dropcache=2" rel="stylesheet" type="text/css">
+  <link href="/css/theme.css?dropcache=6" rel="stylesheet" type="text/css">
   <link href="/css/search.css?dropcache=2" rel="stylesheet" type="text/css">
   <link href="/css/likely.css" rel="stylesheet" type="text/css">
   <script defer src="https://at-glass.alroniks.workers.dev/s.js" data-project="pravilna-by" data-persistence="cookieless"></script>
@@ -77,9 +77,11 @@
 <body>
   <div id="classic-poll-banner" class="poll-banner" style="display: none;">
   <div class="poll-wrapper">
-    <div class="poll-content" id="poll-content-block">
+    <div class="poll-message">
       <span class="poll-icon">💡</span>
       <span class="poll-text">Ці варта дадаць на сайт правілы класічнага правапісу (тарашкевіцы)?</span>
+    </div>
+    <div class="poll-actions">
       <div class="poll-buttons">
         <button type="button" 
                 class="poll-btn poll-btn-yes" 
@@ -98,19 +100,19 @@
           Не, толькі афіцыйны
         </button>
       </div>
+      <button type="button" 
+              class="poll-close-btn" 
+              title="Закрыць апытанне" 
+              aria-label="Закрыць апытанне" 
+              data-glass-event="poll_dismiss" 
+              data-glass-prop-poll="classic_orthography" 
+              onclick="dismissPoll()">
+        &times;
+      </button>
     </div>
     <div class="poll-thanks" id="poll-thanks-block" style="display: none;">
       <span>Дзякуй за ваш голас! 👍</span>
     </div>
-    <button type="button" 
-            class="poll-close-btn" 
-            title="Закрыць апытанне" 
-            aria-label="Закрыць апытанне" 
-            data-glass-event="poll_dismiss" 
-            data-glass-prop-poll="classic_orthography" 
-            onclick="dismissPoll()">
-      &times;
-    </button>
   </div>
 </div>
 
@@ -133,9 +135,11 @@
     try { localStorage.setItem(POLL_KEY, 'voted_' + choice); } catch(e) {}
     sendGlassEvent('poll_vote', { poll: 'classic_orthography', choice: choice });
 
-    var content = document.getElementById('poll-content-block');
+    var msg = banner.querySelector('.poll-message');
+    var actions = banner.querySelector('.poll-actions');
     var thanks = document.getElementById('poll-thanks-block');
-    if (content) content.style.display = 'none';
+    if (msg) msg.style.display = 'none';
+    if (actions) actions.style.display = 'none';
     if (thanks) thanks.style.display = 'flex';
 
     setTimeout(function() {
@@ -189,8 +193,8 @@
   <article>
     <aside>Арфаграфія &rarr; Правапic зычных</aside>
     <h1>
-      Нескладовае ў і у складовае
       <span>§15</span>
+      Нескладовае ў і у складовае
     </h1>
     <ol>
 <li>
