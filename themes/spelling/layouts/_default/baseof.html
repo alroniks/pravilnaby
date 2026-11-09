@@ -34,6 +34,7 @@
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2434f42b75fe427397ab2f8171dc945a"}'></script>
 </head>
 <body>
+  {{ partial "poll-banner.html" . }}
   {{ partial "header.html" . }}
   <main>
       {{ block "main" . }}{{ end }}
